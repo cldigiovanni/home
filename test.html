@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Among Us</title>
+</head>
+
+<body>
+    <header>scroll val: </header>
+    <main>
+        <div id="container">
+            <p id="text">
+                CHARLES DIGIOVANNI CHARLES DIGIOVANNI CHARLES DIGIOVANNI CHARLES DIGIOVANNI 
+                CHARLES DIGIOVANNI CHARLES DIGIOVANNI CHARLES DIGIOVANNI CHARLES DIGIOVANNI 
+                CHARLES DIGIOVANNI CHARLES DIGIOVANNI CHARLES DIGIOVANNI CHARLES DIGIOVANNI 
+            </p>
+        </div>
+    </main>
+    <footer>
+        <div>my links:</div>
+        <div id="footer-links">
+            <span>linkpluh</span>
+            <span>pluhmongus</span>
+            <span>link</span>
+        </div>
+    </footer>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="displacement_noise">
+                <feTurbulence type="fractalNoise" id="turbulence" baseFrequency="0.003 0.003" numOctaves="3" result="noise"
+                    seed="1" />
+                <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="300" />
+            </filter>
+
+            <filter id="contrast">
+                <feColorMatrix in="SourceGraphic" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -5"
+                    result="matrix" />
+                <feComposite in="SourceGraphic" in2="matrix" operator="atop" />
+            </filter>
+            
+        </defs>
+    </svg>
+    <script src="test.js"></script>
+</body>
+
+</html>

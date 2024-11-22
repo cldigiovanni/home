@@ -1,0 +1,32 @@
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+#text {
+    filter: url("#displacement_noise") blur(5px) url("#contrast");
+    margin: 0;
+    word-break: break-all;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 16rem;
+    line-height: 13rem;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+#text::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    height: 100vh;
+}
+
+header {
+    font-size: 36pt;
+    color: white;
+    background-color: black;
+}

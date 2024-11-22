@@ -1,0 +1,35 @@
+/* https://codepen.io/fand/pen/XWebowa */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#hero-text {
+    font-size: 5rem;
+}
+
+body {
+    /* background: 
+        linear-gradient(to top, coral, transparent), 
+        url("./noise.svg"); */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: white;
+}
+
+.hero-text {
+    /* filter: blur(3px); */
+    filter: url('#blur');
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    color: white;
+    background: black;
+}
