@@ -1,7 +1,7 @@
 let elem = document.getElementById("text");
 let header = document.querySelectorAll("header")[0];
 
-// 13rem * 16px * 15 lines
+// 13rem * 16px * 19 lines
 let line_size = 13 * 16 * 19;
 setInterval(function() {
     elem.scrollTop += 1;
