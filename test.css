@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -99,15 +100,16 @@ header span#big-head {
 
 #main-container {
     display: grid;
-    gap: 2rem;
+    grid-gap: 2rem 2rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
     min-height: 100vh;
-    margin: 0 25%;
+    margin: 0 12%;
 }
 
 #main-container > section {
     padding: 1rem;
+    aspect-ratio: 1 / 1;
 }
 
 #main-container .frosted {
