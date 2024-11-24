@@ -7,5 +7,4 @@ setInterval(function() {
     elem.scrollTop += 1;
     if (elem.scrollTop > line_size)
         elem.scrollTop = 1;
-
 }, 1000 / 60);

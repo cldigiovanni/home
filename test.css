@@ -5,13 +5,14 @@
     padding: 0;
 }
 
-body, html {
+body {
     overflow-x: hidden;
-    color: white;
 }
 
 html {
+    color: white;
     background-color: black;
+    overflow-x: hidden;
 }
 
 #bg-container {
@@ -73,22 +74,42 @@ header span#big-head {
     font-family: "Anton", sans-serif;
     filter: drop-shadow(0 0 2rem white);
     text-shadow: white 0px 0px 0.75rem;
-    animation: dropflicker 1s step-end 0s infinite alternate;
+    animation: flicker 1.5s ease-in-out 0s infinite alternate;
 }
 
-@keyframes dropflicker {
-    0% { filter: drop-shadow(0 0 2rem white); }
-    25% { filter: drop-shadow(0 0 4rem white); }
-    50% { filter: drop-shadow(0 0 2.25rem white); }
-    75% { filter: drop-shadow(0 0 4.75rem white); }
-    85% { filter: drop-shadow(0 0 2rem white); }
-    100% { filter: drop-shadow(0 0 1.75rem white); }
+@keyframes flicker {
+    0% { 
+        filter: drop-shadow(0 0 10px white); 
+        text-shadow: white 0px 0px 10px;
+    }
+    100% { 
+        filter: drop-shadow(0 0 25px white); 
+        text-shadow: white 0px 0px 20px;
+    }
 }
 
-@keyframes textflicker {
-    0% { text-shadow: white 0px 0px 10px }
-    25% { text-shadow: white 0px 0px 15px }
-    50% { text-shadow: white 0px 0px 7px }
-    75% { text-shadow: white 0px 0px 13px }
-    100% { text-shadow: white 0px 0px 16px }
+#content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#content-container main {
+    flex-grow: 1;
+}
+
+#main-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    min-height: 100vh;
+    margin: 0 25%;
+}
+
+#main-container > section {
+    padding: 1rem;
+}
+
+#main-container .frosted {
+    backdrop-filter: blur(15px);
 }
