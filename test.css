@@ -14,6 +14,7 @@ html {
     color: white;
     background-color: black;
     overflow-x: hidden;
+    height: 100vh;
 }
 
 #bg-container {
@@ -46,10 +47,6 @@ html {
 
 #text::-webkit-scrollbar {
     display: none;
-}
-
-html {
-    height: 100vh;
 }
 
 header {
