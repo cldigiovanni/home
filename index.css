@@ -1,4 +1,4 @@
-/* https://codepen.io/fand/pen/XWebowa */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 * {
     margin: 0;
@@ -6,30 +6,109 @@
     box-sizing: border-box;
 }
 
-#hero-text {
-    font-size: 5rem;
+body {
+    overflow-x: hidden;
 }
 
-body {
-    /* background: 
-        linear-gradient(to top, coral, transparent), 
-        url("./noise.svg"); */
+html {
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+#bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    /* background: black; */
+    user-select: none;
+    z-index: -1;
+}
+
+#text {
+    filter: url("#displacement_noise") blur(5px) url("#contrast");
+    margin: 0;
+    overflow-wrap: break-word;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 16rem;
+    line-height: 13rem;
+    overflow-y: scroll;
+    height: 100vh;
+    overflow: hidden;
+    transform: translateX(30px);
+    opacity: 0.1;
+    color: white;
+}
+
+#text::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    font-size: 16pt;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    filter: blur(1px);
+}
+
+header > span {
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    flex: 1;
+}
+
+header span#big-head {
+    z-index: -100;
+    font-size: 36pt;
+    font-family: "Anton", sans-serif;
+    filter: drop-shadow(0 0 2rem white);
+    text-shadow: white 0px 0px 0.75rem;
+    animation: flicker 1.5s ease-in-out 0s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { 
+        filter: drop-shadow(0 0 10px white); 
+        text-shadow: white 0px 0px 10px;
+    }
+    100% { 
+        filter: drop-shadow(0 0 25px white); 
+        text-shadow: white 0px 0px 20px;
+    }
+}
+
+#content-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background: white;
 }
 
-.hero-text {
-    /* filter: blur(3px); */
-    filter: url('#blur');
-}
-
-main {
+#content-container main {
     flex-grow: 1;
 }
 
-footer {
-    color: white;
-    background: black;
+#main-container {
+    display: grid;
+    grid-gap: 2rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    min-height: 100vh;
+    margin: 0 12%;
+}
+
+#main-container > section {
+    padding: 1rem;
+    aspect-ratio: 1 / 1;
+}
+
+#main-container .frosted {
+    backdrop-filter: blur(15px);
 }

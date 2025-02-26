@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="test.css">
+    <title>Among Us</title>
 </head>
-<body>
-    <header>Test Header</header>
-    <main>
-        <section id="hero-text">
-            <span>test</span> <br>
-            <span>text</span>
-        </section>
-    </main>
-    <footer>
-        <div>my links:</div>
-        <div id="footer-links">
-            <span>linkpluh</span>
-            <span>pluhmongus</span>
-            <span>link</span>
-        </div>
-    </footer>
-    
-    <script src="header.js"></script>
-</body>
-</html>
 
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <defs>
-        <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-            <feBlend in="SourceGraphic" in2="goo" />
-        </filter>
-        <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
-        </filter>
-    </defs>
-</svg>
+<body>
+    <div id="content-container">
+        <header>
+            <span>welcome</span>
+            <span>to</span>
+            <span id="big-head">CHUCKDOTSYSTEMS</span>
+            <span>!</span>
+            <span>!</span>
+        </header>
+    
+        <main>
+            <div id="main-container">
+                <section class="frosted">
+                    include image of something put thru stegnog
+                </section>
+                <section>
+                    steganography
+                </section>
+                <section>
+                    honeypot
+                </section>
+                <section class="frosted">include graph of honeypot data</section>
+                <section>chess</section>
+                <section>chess engine</section>
+            </div>
+        </main>
+    
+        <footer>
+            <div>my links:</div>
+            <div id="footer-links">
+                <span>linkpluh</span>
+                <span>pluhmongus</span>
+                <span>link</span>
+            </div>
+        </footer>
+    </div>
+    
+    <div id="bg-container">
+        <p id="text">
+            CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;CHARLES&nbsp;DIGIOVANNI&nbsp;
+        </p>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="displacement_noise">
+                <feTurbulence type="fractalNoise" id="turbulence" baseFrequency="0.003 0.003" numOctaves="3" result="noise"
+                    seed="1" />
+                <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="300" />
+            </filter>
+
+            <filter id="contrast">
+                <feColorMatrix in="SourceGraphic" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -5"
+                    result="matrix" />
+                <feComposite in="SourceGraphic" in2="matrix" operator="atop" />
+            </filter>
+        </defs>
+    </svg>
+    <script src="test.js"></script>
+</body>
+
+</html>
