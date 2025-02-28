@@ -4,3 +4,20 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    margin: 0.5rem;
+}
+
+footer, header {
+    background-color: black;
+    color: white;
+    margin: 0.25rem;
+    padding: 0.25rem;
+}
